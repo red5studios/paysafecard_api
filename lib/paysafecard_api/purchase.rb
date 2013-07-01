@@ -1,0 +1,41 @@
+# coding: utf-8
+
+module PaysafecardAPI
+	class Purchase
+		class MissingPaymentSession < StandardError; end
+
+		def self.create_disposition(params)
+			@client = SOAP::WSDLDriverFactory.new(PaysafecardAPI.config.api_url).create_rpc_driver()
+			@client.wiredump_dev = STDOUT
+	        @client.createDisposition(
+                'username'=>params[:username],
+                'password'=>params[:password],
+                'mtid'=>params[:mtid],
+                'subId'=>nil,
+                'amount'=> sprintf('%0.02f',params[:amount].to_f/100),
+                'currency'=>params[:currency],
+                'okUrl'=>params[:okUrl],
+                'nokUrl'=>params[:nokUrl],
+                'merchantclientid'=>nil,
+                'pnUrl'=>nil,
+                'clientIp'=>nil
+	        ).createDispositionReturn
+		end
+
+	    def self.execute_debit(params)
+			@client = SOAP::WSDLDriverFactory.new(PaysafecardAPI.config.api_url).create_rpc_driver()
+			@client.wiredump_dev = STDOUT	    	
+	        @client.executeDebit(
+                'username'=>params[:username],
+                'password'=>params[:password],
+                'mtid'=>params[:mtid],
+                'subId'=>nil,
+                'amount'=> sprintf('%0.02f',params[:amount].to_f/100),
+                'currency'=>params[:currency],
+	            'close'=>1,
+	            'partialDebitId'=>nil
+	        ).executeDebitReturn
+	    end		
+
+	end
+end

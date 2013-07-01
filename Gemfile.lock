@@ -1,0 +1,41 @@
+GIT
+  remote: git://github.com/felipec/soap4r.git
+  revision: 802dc44fc446d3325148ab8a9a7d156ab74287e5
+  specs:
+    soap4r (1.5.8)
+      httpclient (>= 2.1.1)
+
+PATH
+  remote: .
+  specs:
+    paysafecard_api (1.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.3.5)
+    crack (0.4.0)
+      safe_yaml (~> 0.9.0)
+    diff-lcs (1.2.4)
+    httpclient (2.3.3)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    safe_yaml (0.9.3)
+    webmock (1.12.3)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  paysafecard_api!
+  rspec
+  soap4r!
+  webmock

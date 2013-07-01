@@ -1,0 +1,12 @@
+data/spec/paysafecard_service_responses.rb.i
+data/lib/paysafecard_api.rb.i
+data/spec/lib/paysafecard_api/purchase_spec.rb.i
+data/spec/lib/mopay_api/purchase_spec.rb.i
+data/paysafecard_api.gemspec.i
+data/spec/spec_helper.rb.i
+data/Gemfile.i
+data/lib/paysafecard_api/purchase.rb.i
+data/.hgignore.i
+data/Rakefile.i
+data/Gemfile.lock.i
+data/vendor/red5.i
