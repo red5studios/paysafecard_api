@@ -16,9 +16,9 @@ module PaysafecardAPI
                 'currency'=>params[:currency],
                 'okUrl'=>params[:okUrl],
                 'nokUrl'=>params[:nokUrl],
-                'merchantclientid'=>nil,
                 'pnUrl'=>params[:pnUrl],
-                'clientIp'=>nil
+                'clientIp'=>params[:clientIp],
+                'merchantclientid'=>nil        
 	        ).createDispositionReturn
 		end
 
