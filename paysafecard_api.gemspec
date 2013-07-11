@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'paysafecard_api'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = "API for PaySafeCard"
   s.description = ""
   s.authors     = ["Jeremy Engholm"]

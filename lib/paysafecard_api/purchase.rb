@@ -18,7 +18,7 @@ module PaysafecardAPI
                 'nokUrl'=>params[:nokUrl],
                 'pnUrl'=>params[:pnUrl],
                 'clientIp'=>params[:clientIp],
-                'merchantclientid'=>nil        
+                'merchantclientid'=>params[:merchantclientid]        
 	        ).createDispositionReturn
 		end
 
