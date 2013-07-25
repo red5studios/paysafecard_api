@@ -37,11 +37,11 @@ module PaysafecardAPI
 	    def self.get_mid(params)
 			@client = SOAP::WSDLDriverFactory.new(PaysafecardAPI.config.api_url).create_rpc_driver()
 			@client.wiredump_dev = STDOUT
-	        @client.getMid(
+	        @client.getMID(
                 'username'=>params[:username],
                 'password'=>params[:password],
                 'currency'=>params[:currency]
-	        ).getMid
+	        ).getMID
 	    end	    	
 
 	    def self.execute_debit(params)
